@@ -35,3 +35,6 @@ VMware Tools requires build tools and Linux headers:
 sudo apt install -y open-vm-tools open-vm-tools-desktop build-essential linux-headers-$(uname -r)
 
 
+
+
+
