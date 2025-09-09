@@ -38,3 +38,6 @@ sudo apt install -y open-vm-tools open-vm-tools-desktop build-essential linux-he
 
 
 
+
+
+
