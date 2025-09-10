@@ -49,8 +49,6 @@ pkg update && pkg upgrade -y
 ## Install Ubuntu on Termux
 After installing and preparing Termux, you can run the Ubuntu operating system inside it.
 
-![Ubuntu Logo](assets/ubuntu-logo.png)
-
 
 ## Steps to Install
 ### 1. Update packages in Termux
