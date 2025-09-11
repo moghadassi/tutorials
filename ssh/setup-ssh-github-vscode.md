@@ -143,43 +143,47 @@ After setting up your SSH key, the next step is to configure Git and connect VSC
 
 Once your repository is set up and VSCode is connected, you can start adding files, making commits, and pushing them to GitHub.
 
-- ### 📝 Create or Edit Files
+1. 📝 **Create or Edit Files**  
+   - Open your project in **VSCode**.  
+   - Create a new file or edit existing files.  
+   - Example: create a `README.md` file with some content:  
+     ```markdown
+     # My Project
+     This is my first file in the repository.
+     ```
 
-  1. Open your project in **VSCode**.  
-  2. Create a new file or edit existing files.  
-     - Example: Create `README.md` with some content.
+2. ➕ **Stage Your Changes**  
+   Add the modified or new files to the staging area:  
+   ```bash
+   git add .
+   ```  
+   - 🔑 `git add .` stages all changes.  
+   - You can also stage individual files:  
+     ```bash
+     git add filename
+     ```
 
-  ```markdown
-  # My Project
-  This is my first file in the repository.
-  ```
+3. 💾 **Commit Your Changes**  
+   Create a commit with a descriptive message:  
+   ```bash
+   git commit -m "Add README file"
+   ```  
+   - 🐙 This records your changes locally in the Git repository.
 
-- ➕ Stage Your Changes
-  Add the modified or new files to the staging area:
-  ```bash
-  git add .
-  ```
-  - 🔑 git add . stages all changes. You can also stage individual files: git add filename.
+4. 🚀 **Push Changes to GitHub**  
+   Send your commits to the remote repository on GitHub:  
+   ```bash
+   git push origin main
+   ```  
+   - ✅ Make sure the branch name matches your repository’s main branch (`main` or `master`).  
+   - 🔒 Since you set up SSH, you won’t need to enter your GitHub password.
 
-- ### 💾 Commit Your Changes
-  Create a commit with a descriptive message:
-  ```bash
-  git commit -m "Add README file"
-  ```
-  - 🐙 This records your changes locally in the Git repository.
 
-- ### 🚀 Push Changes to GitHub
-  Send your commits to the remote repository on GitHub:
-  ```bash
-  git push origin main
-  ```
-  - ✅ Make sure the branch name matches your repository’s main branch (main or master).
-  - 🔒 Since you set up SSH, you won’t need to enter your GitHub password.
 
-  🧐 Notes
-  - You can repeat these steps anytime you make changes.
-  - Always stage (`git add`) before committing.
-  - Use descriptive commit messages for better project history.
+### 🧐 Notes
+- You can repeat these steps anytime you make changes.  
+- Always **stage (`git add`) before committing**.  
+- Use **descriptive commit messages** for better project history.
 
 ---
 
