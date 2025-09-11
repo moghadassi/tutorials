@@ -25,7 +25,7 @@ ssh-keygen -t ed25519 -C "your.email@example.com"
 - **Private Key**: The file you saved (e.g., `id_ed25519`) — keep this secret!
 - **Public Key**: The same file with .pub extension (e.g., `id_ed25519.pub`) — this will be added to GitHub.
 
-**Notes** 🧐
+**Notes** 📝
 - Keep your ***private key*** secure — never share it. ⚠️
 - You can generate multiple keys if you need separate ones for different accounts or machines.
 
@@ -90,6 +90,51 @@ Hi **username**! You've successfully authenticated, but GitHub does not provide 
 - In GitHub, under Settings → SSH and GPG keys, a green check (✅) appears next to the key, indicating it is valid and ready to use.
 - ⚠️ If you see a "Permission denied" error, check that your key is added to `ssh-agent` and registered on GitHub.
 
+---
+
+## Step 3: Configuring Git and Connecting VSCode
+After setting up your SSH key, the next step is to configure Git and connect VSCode to your GitHub repository.
+
+### 🖥️ Set Git Username and Email
+- To properly record your commits, configure your Git username and email:
+```bash
+git config --global user.name "Your Name"
+```
+
+```bsah
+git config --global user.email "your.email@example.com"
+```
+
+- ⚠️ This sets your information globally for all repositories on your computer.
+- ✅ You can also set repository-specific information later if needed.
+
+### 🔗 Connect VSCode to GitHub via SSH
+1. Open VSCode.
+2. Go to Source Control (or press `Ctrl + Shift + G`.
+3. Clone an existing repository or initialize a new one:
+
+```bash
+# Clone an existing repository
+git clone git@github.com:username/repo.git
+```
+```bash
+# Or initialize a new repository
+git init
+```
+
+- 🐙 If you cloned the repository, VSCode will automatically recognize it.
+- 🔑 Make sure your SSH key is active and the connection to GitHub is working.
+
+#### 📝 Important Notes
+- After cloning or initializing a repository, you can edit files and use VSCode to stage and commit changes.
+- To push changes to GitHub, use SSH:
+```bash
+git push origin main
+```
+
+**⚠️ Make sure the branch name matches your repository’s main branch (often main or master).**
+
+---
 
 
 
