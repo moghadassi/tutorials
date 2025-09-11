@@ -72,7 +72,9 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBX8gN0X+X3G5sYhW0u2PzB+4c3zM2yG3zqM1t1a2XyZ
 3. Enter a title for the key (e.g., My Laptop) and paste your public key into the Key field.
 4. Click Add SSH key.
 
-### Click Add SSH key.
+### ✅ Verifying the SSH Key (Green Check)
+After adding your public key to GitHub, you can verify that the key is working correctly.
+
 - Run the following command to verify the connection:
 ```bash
 ssh -T git@github.com
@@ -85,7 +87,11 @@ ssh -T git@github.com
 Hi **username**! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 - ✅ This message means your SSH key is correctly set up and GitHub recognizes you.
-- ⚠️ If you see a "Permission denied" error, check that your key is added to ssh-agent and registered on GitHub.
+- In GitHub, under Settings → SSH and GPG keys, a green check (✅) appears next to the key, indicating it is valid and ready to use.
+- ⚠️ If you see a "Permission denied" error, check that your key is added to `ssh-agent` and registered on GitHub.
+
+
+
 
 
 
