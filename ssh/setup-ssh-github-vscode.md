@@ -80,9 +80,9 @@ ssh -T git@github.com
 ✅ If successful, you should see a welcome message from GitHub.
 
 
- Example output:
+---> Example output:
 ```bash
----> Hi **username**! You've successfully authenticated, but GitHub does not provide shell access.
+Hi **username**! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 - ✅ This message means your SSH key is correctly set up and GitHub recognizes you.
 - ⚠️ If you see a "Permission denied" error, check that your key is added to ssh-agent and registered on GitHub.
