@@ -1,3 +1,7 @@
+<img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS Code Logo" width="100"/>  
+<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="50"/>
+
+
 # 🔑 SSH Guide
 
 This file provides a short explanation of **SSH (Secure Shell)** and how to use it for connecting to servers or services like GitHub.  
