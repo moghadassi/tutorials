@@ -1,3 +1,6 @@
+<img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS Code Logo" width="100"/>  
+<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="50"/>
+
 # SSH Key Setup for GitHub and VSCode 🖥️
 
 ## Step 1: Generating an SSH Key
