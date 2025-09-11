@@ -215,17 +215,96 @@ ssh-add ~/.ssh/another_key
  
 - Optional: For advanced users, create a `~/.ssh/config` file to manage multiple keys and hosts:
   
-Host github.com
-
-  HostName github.com
-  
-  User git
-  
-  IdentityFile **`~/.ssh/id_ed25519`**
+     ```text
+     Host github.com
+       HostName github.com
+       User git
+       IdentityFile ~/.ssh/id_ed25519
+     ```
 
 ⚠️ This simplifies using multiple SSH keys with different accounts or repositories.
 
 ---
+
+## Step 6: Troubleshooting and Additional Tips
+
+Even after setting up everything, you might encounter some issues. Here are tips and common solutions.
+
+---
+
+### ⚠️ Common SSH Errors
+
+1. **Permission denied (publickey)**  
+   - Make sure your private key is added to `ssh-agent`:  
+     ```bash
+     ssh-add ~/.ssh/id_ed25519
+     ```
+   - Verify the public key is registered on GitHub.
+   - Ensure you are using the correct username and repository URL.
+
+2. **Host key verification failed**  
+   - This happens if GitHub’s host key changed or was never accepted.  
+     Run:
+     ```bash
+     ssh-keyscan github.com >> ~/.ssh/known_hosts
+     ```
+
+3. **Multiple keys conflict**  
+   - If you have multiple SSH keys, configure a `~/.ssh/config` file:  
+     ```text
+     Host github.com
+       HostName github.com
+       User git
+       IdentityFile ~/.ssh/id_ed25519
+     ```
+
+---
+
+###  Useful Git Tips
+
+- **Check current configuration**:
+  ```bash
+  git config --list
+  ```
+
+- **Check SSH connection:**
+  ```bash
+  ssh -T git@github.com
+  ```
+- **Switch branches safely:**
+  ```bash
+  git checkout branch_name
+  ```
+- **Undo last commit (without losing changes):**
+  ```bash
+  git reset --soft HEAD~1
+  ```
+  
+
+### 📝 Additional Recommendations
+  - Keep your keys safe and backed up.
+  - Use descriptive commit messages for clarity.
+  - Regularly pull (`git pull`) to stay up-to-date with remote changes.
+  - Use SSH over HTTPS for secure and password-less operations.
+
+
+
+### 🔒 Security Recommendations
+
+- Keep your **private SSH key** safe and never share it with anyone.  
+- Use **strong and unique passphrases** for your SSH keys.  
+- Regularly **review and remove old or unused SSH keys** from GitHub.  
+- Use descriptive titles for your keys on GitHub (e.g., `Work Laptop`, `Home PC`) to easily manage them.  
+- Avoid storing private keys in public or shared folders.  
+- Always verify the SSH connection before pushing sensitive code:
+
+```bash
+ssh -T git@github.com
+```
+
+
+
+
 
 
 
