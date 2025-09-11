@@ -188,7 +188,7 @@ Check which keys are currently added:
 ```bash
 ssh-add -l
 ```
-- ✅ You will see the fingerprint and file path of all active SSH keys.
+✅ You will see the fingerprint and file path of all active SSH keys.
 
 ### ❌ Remove a Key from ssh-agent
 If you need to remove a key:
@@ -205,15 +205,15 @@ ssh-add ~/.ssh/another_key
 - Use `ssh -T git@github.com` to test each key.
 
 
-#### 📝 Additional Tips
-- Keep your private key secure — never share it. ⚠️
-- Use descriptive titles for keys on GitHub (e.g., `Work Laptop`, `Home PC)`.
-- If you encounter errors like `Permission denied`, check:
-   1. The correct key is added to ssh-agent.
-   2. The public key is registered in GitHub.
-   3. You are connecting to the correct account/username.
+- ### 📝 Additional Tips
+  - Keep your private key secure — never share it. ⚠️
+  - Use descriptive titles for keys on GitHub (e.g., `Work Laptop`, `Home PC)`.
+  - If you encounter errors like `Permission denied`, check:
+     1. The correct key is added to ssh-agent.
+     2. The public key is registered in GitHub.
+     3. You are connecting to the correct account/username.
  
-- Optional: For advanced users, create a `~/.ssh/config` file to manage multiple keys and hosts:
+  - Optional: For advanced users, create a `~/.ssh/config` file to manage multiple keys and hosts:
   
      ```text
      Host github.com
@@ -262,26 +262,26 @@ Even after setting up everything, you might encounter some issues. Here are tips
 
 ###  Useful Git Tips
 
-- **Check current configuration**:
+**Check current configuration**:
   ```bash
   git config --list
   ```
 
-- **Check SSH connection:**
+**Check SSH connection:**
   ```bash
   ssh -T git@github.com
   ```
-- **Switch branches safely:**
+**Switch branches safely:**
   ```bash
   git checkout branch_name
   ```
-- **Undo last commit (without losing changes):**
+**Undo last commit (without losing changes):**
   ```bash
   git reset --soft HEAD~1
   ```
   
 
-### 📝 Additional Recommendations
+- ### 📝 Additional Recommendations
   - Keep your keys safe and backed up.
   - Use descriptive commit messages for clarity.
   - Regularly pull (`git pull`) to stay up-to-date with remote changes.
@@ -289,25 +289,64 @@ Even after setting up everything, you might encounter some issues. Here are tips
 
 
 
-### 🔒 Security Recommendations
-
-- Keep your **private SSH key** safe and never share it with anyone.  
-- Use **strong and unique passphrases** for your SSH keys.  
-- Regularly **review and remove old or unused SSH keys** from GitHub.  
-- Use descriptive titles for your keys on GitHub (e.g., `Work Laptop`, `Home PC`) to easily manage them.  
-- Avoid storing private keys in public or shared folders.  
-- Always verify the SSH connection before pushing sensitive code:
+- ### 🔒 Security Recommendations
+  - Keep your **private SSH key** safe and never share it with anyone.  
+  - Use **strong and unique passphrases** for your SSH keys.  
+  - Regularly **review and remove old or unused SSH keys** from GitHub.  
+  - Use descriptive titles for your keys on GitHub (e.g., `Work Laptop`, `Home PC`) to easily manage them.  
+  - Avoid storing private keys in public or shared folders.  
+  - Always verify the SSH connection before pushing sensitive code:
 
 ```bash
 ssh -T git@github.com
 ```
 
+---
+
+## Step 7: Managing Multiple GitHub Accounts with SSH
+
+Sometimes you may want to use GitHub with more than one account (for example, **personal** and **work**).  
+Here is a clean way to manage this.
 
 
+### 🔑 Create SSH Key for Personal Account
 
+```bash
+# Generate SSH key for personal account
+ssh-keygen -t ed25519 -C "personal.email@example.com"
+```
 
+- Add the key to the SSH agent:
+  ```bash
+  ssh-add ~/.ssh/id_ed25519
+  ```
 
+- Copy the public key and add it to GitHub (Settings → SSH and GPG Keys):
+  ```bash
+  cat ~/.ssh/id_ed25519.pub
+  ```
 
+📝 Configure SSH for Personal Account
+  Edit (or create) `~/.ssh/config` file:
+  ```text
+  Host github-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+  ```
 
+- Now you can clone personal repositories like this:
+  ```bash
+  git clone git@github-personal:username/personal-repo.git
+  ```
+
+- ### 💡 What about Work Account?
+  - If you also need a work account, simply repeat the same process:
+  - Generate another SSH key (`e.g., id_ed25519_work`)
+  - Add it to ssh-agent
+  - Add the public key to your work GitHub account
+  - Add a new section in `~/.ssh/config` (e.g., `github-work`)
+
+Then you’ll be able to manage both accounts without conflicts.
 
 
