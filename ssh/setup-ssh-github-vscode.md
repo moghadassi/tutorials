@@ -188,49 +188,50 @@ Once your repository is set up and VSCode is connected, you can start adding fil
 ---
 
 ## Step 5: Managing SSH Keys and Additional Tips
+
 Once your SSH key is working and you are pushing/pulling from GitHub, it’s useful to know how to manage keys and handle common issues.
 
-- ### 🔑 List All SSH Keys Added to ssh-agent
-  Check which keys are currently added:
-  ```bash
-  ssh-add -l
-  ```
-  ✅ You will see the fingerprint and file path of all active SSH keys.
+### 🔑 List All SSH Keys Added to ssh-agent
+Check which keys are currently added:
+```bash
+ssh-add -l
+```
+✅ You will see the fingerprint and file path of all active SSH keys.
 
-  ### ❌ Remove a Key from ssh-agent
-  If you need to remove a key:
-  ```bash
-  ssh-add -d ~/.ssh/id_ed25519
-  ```
-  - 🔒 Use this when switching keys or retiring old ones.
+### ❌ Remove a Key from ssh-agent
+If you need to remove a key:
+```bash
+ssh-add -d ~/.ssh/id_ed25519
+```
+- 🔒 Use this when switching keys or retiring old ones.
 
-  ### 🐙 Adding Multiple Keys
-  If you have multiple GitHub accounts or multiple keys, you can add more keys to the agent:
-  ```bash
-  ssh-add ~/.ssh/another_key
-  ```
-  - Use `ssh -T git@github.com` to test each key.
+### 🐙 Adding Multiple Keys
+If you have multiple GitHub accounts or multiple keys, you can add more keys to the agent:
+```bash
+ssh-add ~/.ssh/another_key
+```
+- Use `ssh -T git@github.com` to test each key.
 
 
-- ### 📝 Additional Tips
-  - Keep your private key secure — never share it. ⚠️
-  - Use descriptive titles for keys on GitHub (e.g., `Work Laptop`, `Home PC)`.
-  - If you encounter errors like `Permission denied`, check:
-     1. The correct key is added to ssh-agent.
-     2. The public key is registered in GitHub.
-     3. You are connecting to the correct account/username.
- 
-  - Optional: For advanced users, create a `~/.ssh/config` file to manage multiple keys and hosts:
-  
-     ```text
-     Host github.com
-       HostName github.com
-       User git
-       IdentityFile ~/.ssh/id_ed25519
-     ```
+
+### 📝 Additional Tips
+- Keep your private key secure — never share it. ⚠️  
+- Use descriptive titles for keys on GitHub (e.g., `Work Laptop`, `Home PC`).  
+- If you encounter errors like `Permission denied`, check:  
+  1. The correct key is added to ssh-agent.  
+  2. The public key is registered in GitHub.  
+  3. You are connecting to the correct account/username.  
+
+Optional: For advanced users, create a `~/.ssh/config` file to manage multiple keys and hosts:
+
+```text
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519
+```
 
 ⚠️ This simplifies using multiple SSH keys with different accounts or repositories.
-
 ---
 
 ## Step 6: Troubleshooting and Additional Tips
