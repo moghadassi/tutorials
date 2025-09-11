@@ -3,6 +3,7 @@
 # Install Ubuntu on your mobile using `Termux` ✅
 
 
+
 ### Install Termux on Android
 Termux is a terminal emulator and Linux environment for Android that allows you to run Linux tools directly on your phone.
 
