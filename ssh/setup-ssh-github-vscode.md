@@ -22,8 +22,11 @@ ssh-keygen -t ed25519 -C "your.email@example.com"
 - It is recommended to use a secure passphrase. You can also leave it empty by pressing `Enter` for testing purposes. 🔒
 
 **Result**
-- **Private Key**: The file you saved (e.g., `id_ed25519`) — keep this secret! 🔑
+- **Private Key**: The file you saved (e.g., `id_ed25519`) — keep this secret!
 - **Public Key**: The same file with .pub extension (e.g., `id_ed25519.pub`) — this will be added to GitHub.
 
+**Notes** 🧐
+- Keep your ***private key*** secure — never share it. ⚠️
+- You can generate multiple keys if you need separate ones for different accounts or machines.
 ---
 
