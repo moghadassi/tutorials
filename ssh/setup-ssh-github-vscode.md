@@ -5,7 +5,6 @@
 To securely connect to GitHub, you first need to generate an SSH key.
 
 ### Command to Generate SSH Key
-
 Open your terminal (Linux / macOS / Git Bash on Windows) and run:
 
 ```bash
