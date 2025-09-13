@@ -68,16 +68,17 @@ pkg update && pkg upgrade -y
 ```
 
 ### 🔹 Install Required Tools
-Install proot and proot-distro which are needed to run Linux distributions:
+Install `proot` and `proot-distro` which are needed to run Linux distributions:
 ```bash
 pkg install proot proot-distro -y
 ```
 
-🔹 (Optional) Grant Storage Access
+### 🔹 (Optional) Grant Storage Access
 If you haven’t already, allow Termux to access your device storage:
 ```bash
 termux-setup-storage
 ```
+
 This step is useful for saving files, backups, and sharing data between Termux and your Android internal storage.
 
 ---
