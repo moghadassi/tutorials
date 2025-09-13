@@ -1,4 +1,4 @@
-# 📖 Installing Linux Distributions on Termux (Debian, Ubuntu , Kali, Alpine, Arch)
+# 📖 Installing Kali Linux on Termux
 
 ## 📌 Prerequisites & Warnings
 
