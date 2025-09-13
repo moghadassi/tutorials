@@ -57,3 +57,35 @@ A stable internet connection is required to download rootfs or packages.
   
 ---
 
+## Step 2: Preparing Termux
+
+Before installing any Linux distribution, you need to prepare your Termux environment with the necessary updates and tools.
+
+### 🔹 Update and Upgrade Packages
+First, update the package lists and upgrade existing packages:
+```bash
+pkg update && pkg upgrade -y
+```
+
+### 🔹 Install Required Tools
+Install proot and proot-distro which are needed to run Linux distributions:
+```bash
+pkg install proot proot-distro -y
+```
+
+🔹 (Optional) Grant Storage Access
+If you haven’t already, allow Termux to access your device storage:
+```bash
+termux-setup-storage
+```
+This step is useful for saving files, backups, and sharing data between Termux and your Android internal storage.
+
+---
+
+
+
+
+
+
+
+
