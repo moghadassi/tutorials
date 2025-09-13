@@ -1,3 +1,5 @@
+<img src="https://www.kali.org/images/kali-nethunter-logo.png" alt="Kali NetHunter Logo" width="150"/>
+
 # Kali Linux Installation on Termux (Android)
 
 This guide will help you install Kali Linux on your Android device using Termux.
@@ -26,9 +28,15 @@ pkg install wget proot -y
 ```
 
 ### Step 3: Download the Kali Linux Installer
-Now, let's download the Kali Linux installation script.
+Download the official Kali NetHunter installer from the latest source:
+
 ```bash
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Kali/Kali.sh
+wget -O install-nethunter-termux https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/-/raw/master/nethunter-rootless/install-nethunter-termux
+```
+--- 
+
+```bash
+curl -LO https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/-/raw/master/nethunter-rootless/install-nethunter-termux
 ```
 
 ```bash
@@ -36,18 +44,13 @@ wget -O install-nethunter-termux https://offs.ec/2MceZWr
 chmod +x install-nethunter-termux
 ./install-nethunter-termux
 ```
---- 
-```bash
-wget -O install-nethunter-termux https://offs.ec/am
-```
-- [This URL is from the official Kali documentation; it points to the latest installer.](https://www.kali.org/docs/nethunter/nethunter-rootless/)
-
 
 ### Step 4: Give Execute Permission
 Make the downloaded script executable:
 ```bash
 chmod +x install-nethunter-termux
 ```
+
 ### 5. Run the installer:
 ```bash
 ./install-nethunter-termux
@@ -78,8 +81,18 @@ chmod +x install-nethunter-termux
 
   2. You should now see the Kali Linux desktop on your Android device!
 
-Step 8: Basic Usage and Commands
+### Step 8: Basic Usage and Commands
+  - To update Kali packages: Run `apt update && apt upgrade` inside the Kali session.
+  - To exit Kali: Type `exit`.
+  -  Common tools like `nmap`, `metasploit`, etc., are available in the full installation.
+  - If you need to uninstall: Run `./install-nethunter-termux` -r to remove it safely.
 
 
-    
+## Troubleshooting Tips
+- **Error with downloads? Check your internet connection or try a VPN if your region has restrictions.**
+- **Permission denied? Ensure Termux has storage access (Settings > Apps > Termux > Permissions).**
+- **Out of space? Clear cache or use an SD card if supported.**
+- **For more help, visit the official Kali NetHunter documentation or Termux GitHub issues.**
 
+
+---
