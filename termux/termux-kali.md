@@ -33,7 +33,7 @@ Download the official Kali NetHunter installer from the latest source:
 ```bash
 wget -O install-nethunter-termux https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/-/raw/master/nethunter-rootless/install-nethunter-termux
 ```
---- 
+
 
 ```bash
 curl -LO https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/-/raw/master/nethunter-rootless/install-nethunter-termux
