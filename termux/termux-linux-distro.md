@@ -34,9 +34,15 @@ A stable internet connection is required to download rootfs or packages.
 - Installed distros act more like a **user-space environment**, not a full replacement for your phone’s OS.
 - If you run network services (like SSH or VNC), be careful about security risks since your phone could be exposed.
 
+### 📋 Check Available Distributions Before Installation
+  - Before installing any Linux distribution, you can check which ones are available in **proot-distro** by running:
+    ```bash
+    proot-distro list
+    ```
+
 ### 🔹 Installation Options
 
-1. **Using proot-distro** ✅  
+2. **Using proot-distro** ✅  
    - Easiest method to install Linux distributions.  
    - Just run:  
      ```bash
@@ -44,7 +50,10 @@ A stable internet connection is required to download rootfs or packages.
      ```  
    - Fast, stable, and recommended for most users.  
 
-2. **Manual installation with proot + rootfs extraction** ⚙️  
+3. **Manual installation with proot + rootfs extraction** ⚙️  
    - For advanced users who want custom versions or manual setup.  
    - Requires downloading rootfs (via `wget`) and running `proot` with specific parameters.  
-   - More flexible, but involves more steps and a higher chance of errors.  
+   - More flexible, but involves more steps and a higher chance of errors.
+  
+---
+
