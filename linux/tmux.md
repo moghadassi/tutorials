@@ -63,3 +63,24 @@ Example:
 - To split vertically → press `Ctrl + b` then `%`
 
 ---
+
+## 🪟 Windows and Panes
+
+### Windows
+- Create a new window: `Ctrl + b, c`
+- Switch to next window: `Ctrl + b, n`
+- Switch to previous window: `Ctrl + b, p`
+- List all windows: `Ctrl + b, w`
+- Rename window: `Ctrl + b, ,`
+
+### Panes
+- Split horizontally: `Ctrl + b, "`
+- Split vertically: `Ctrl + b, %`
+- Move between panes: `Ctrl + b` + Arrow key
+- Close pane: `Ctrl + b, x`
+- Resize pane: `Ctrl + b` + Alt + Arrow key
+
+---
+
+
+
