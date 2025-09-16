@@ -113,3 +113,22 @@ Sessions are collections of windows and panes. They make it easy to organize dif
 
 ---
 
+## 🛠️ Useful Commands Cheat Sheet
+
+| Action | Command |
+|--------|----------|
+| New session | `tmux new -s name` |
+| List sessions | `tmux ls` |
+| Attach session | `tmux attach -t name` |
+| Detach session | `Ctrl + b, d` |
+| New window | `Ctrl + b, c` |
+| Rename window | `Ctrl + b, ,` |
+| Next/Prev window | `Ctrl + b, n` / `Ctrl + b, p` |
+| Split pane (vertical) | `Ctrl + b, %` |
+| Split pane (horizontal) | `Ctrl + b, "` |
+| Switch pane | `Ctrl + b` + Arrow key |
+| Close pane | `Ctrl + b, x` |
+| Kill session | `tmux kill-session -t name` |
+
+---
+
