@@ -46,3 +46,20 @@ tmux -V
 ```
 
 ---
+
+## 🚀 Getting Started
+
+To start tmux, simply type:
+
+```bash
+tmux
+```
+
+You are now inside a tmux session.  
+By default, tmux uses **`Ctrl + b`** as the **prefix key**. Every command in tmux starts with this prefix.
+
+Example:
+- To split the screen horizontally → press `Ctrl + b` then `"`
+- To split vertically → press `Ctrl + b` then `%`
+
+---
