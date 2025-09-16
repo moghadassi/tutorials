@@ -176,3 +176,13 @@ Here’s how you might use tmux in real life:
 - **Persistent sessions:** Combine tmux with `byobu` or use `tmux-resurrect` plugin to save/restore sessions.
 
 ---
+
+## 📚 Resources
+
+- Official documentation: [https://github.com/tmux/tmux/wiki](https://github.com/tmux/tmux/wiki)
+- Cheatsheet: [https://tmuxcheatsheet.com/](https://tmuxcheatsheet.com/)
+- Tutorial: [https://linuxize.com/post/getting-started-with-tmux/](https://linuxize.com/post/getting-started-with-tmux/)
+
+---
+
+🚀 Now you are ready to supercharge your terminal with tmux!
