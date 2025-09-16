@@ -82,5 +82,34 @@ Example:
 
 ---
 
+## 📂 Sessions
 
+Sessions are collections of windows and panes. They make it easy to organize different tasks.
+
+- Start a new named session:
+  ```bash
+  tmux new -s mysession
+  ```
+
+- Detach from session (leave it running):
+  ```
+  Ctrl + b, d
+  ```
+
+- List all sessions:
+  ```bash
+  tmux ls
+  ```
+
+- Reattach to a session:
+  ```bash
+  tmux attach -t mysession
+  ```
+
+- Kill a session:
+  ```bash
+  tmux kill-session -t mysession
+  ```
+
+---
 
