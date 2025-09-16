@@ -132,3 +132,37 @@ Sessions are collections of windows and panes. They make it easy to organize dif
 
 ---
 
+## 🎯 Example Workflow
+
+Here’s how you might use tmux in real life:
+
+1. Start tmux:
+   ```bash
+   tmux new -s dev
+   ```
+
+2. Split your terminal into two vertical panes:
+   ```
+   Ctrl + b, %
+   ```
+
+3. In the left pane, run a development server (e.g., `npm run dev`).  
+   In the right pane, edit files or monitor logs.
+
+4. Open another window for Git commands:  
+   ```
+   Ctrl + b, c
+   ```
+
+5. Detach from your session (leave everything running):  
+   ```
+   Ctrl + b, d
+   ```
+
+6. Later, reconnect to it:
+   ```bash
+   tmux attach -t dev
+   ```
+
+---
+
