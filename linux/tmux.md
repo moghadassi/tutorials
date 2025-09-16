@@ -166,3 +166,13 @@ Here’s how you might use tmux in real life:
 
 ---
 
+## ⚡ Tips and Tricks
+
+- **Scroll in history:** Press `Ctrl + b, [` then use Arrow keys or PgUp/PgDn. Exit with `q`.
+- **Rename session:**  
+  ```bash
+  tmux rename-session -t oldname newname
+  ```
+- **Persistent sessions:** Combine tmux with `byobu` or use `tmux-resurrect` plugin to save/restore sessions.
+
+---
