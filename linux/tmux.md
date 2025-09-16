@@ -10,3 +10,39 @@ With tmux, you can:
 - Keep your programs running even if you disconnect.
 
 ---
+
+## 📦 Installation
+
+### Linux
+Install tmux with your package manager:
+
+```bash
+# Ubuntu/Debian
+sudo apt update && sudo apt install tmux -y
+```
+
+```bash
+# Fedora
+sudo dnf install tmux -y
+```
+
+```bash
+# Arch Linux
+sudo pacman -S tmux
+```
+
+### macOS
+
+```bash
+brew install tmux
+```
+
+### Windows (via WSL)
+If you are using **Windows Subsystem for Linux (WSL)**, just install tmux inside your Linux distribution as above.
+
+Check installation:
+```bash
+tmux -V
+```
+
+---
