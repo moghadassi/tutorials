@@ -1,3 +1,6 @@
+
+![tmux-logo](https://github.com/tmux/tmux/blob/master/logo/tmux-logo-medium.png)
+
 # 🖥️ Introduction to tmux
 
 `tmux` (Terminal MUltipleXer) is a powerful tool that allows you to manage multiple terminal sessions within a single window.  
