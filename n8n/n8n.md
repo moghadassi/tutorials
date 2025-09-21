@@ -30,3 +30,28 @@ After starting n8n, you will enter the **Visual Workflow Editor**.
 Here you can drag and drop nodes to build your own workflow.  
 
 ---
+
+## 3. Create Your First Workflow ⚡  
+
+### Example: Fetch data from an API and send it to Telegram  
+
+1. **Create a new Workflow**  
+   From the main menu, click **New Workflow**.  
+
+2. **Add an HTTP Request Node**  
+   - Choose the `HTTP Request` node.  
+   - Enter any API URL (e.g., [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts)).  
+
+3. **Add a Telegram Node**  
+   - Get your Bot Token from [BotFather](https://t.me/botfather).  
+   - Add a `Telegram` node and connect it to the previous one.  
+   - Send the fetched API data as a Telegram message.  
+
+4. **Execute**  
+   Click **Execute Workflow** and check the result in your Telegram. 🎉  
+
+---
+
+
+
+
