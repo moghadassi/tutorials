@@ -23,3 +23,10 @@ After running, n8n will be available in your browser at:
 👉 [http://localhost:5678](http://localhost:5678)
 
 ---
+
+## 2. First Run 🌐  
+
+After starting n8n, you will enter the **Visual Workflow Editor**.  
+Here you can drag and drop nodes to build your own workflow.  
+
+---
