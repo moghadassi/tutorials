@@ -52,6 +52,12 @@ Here you can drag and drop nodes to build your own workflow.
 
 ---
 
+## 4. Save and Activate Workflows 💾  
+
+- Use the **Save** button to store your workflow.  
+- Use the **Activate** button if you want it to always run automatically.  
+
+---
 
 
 
