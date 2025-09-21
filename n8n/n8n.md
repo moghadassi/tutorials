@@ -59,5 +59,13 @@ Here you can drag and drop nodes to build your own workflow.
 
 ---
 
+## 5. Useful Resources 📚  
+
+- [Official Documentation](https://docs.n8n.io/)  
+- [Community Forum](https://community.n8n.io/)  
+- [n8n GitHub](https://github.com/n8n-io/n8n)  
+
+---
+
 
 
