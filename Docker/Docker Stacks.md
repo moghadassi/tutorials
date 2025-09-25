@@ -20,3 +20,28 @@ Think of it as a **team of containers** working side by side.
 Instead of starting containers one by one, you define them in a configuration file and deploy them together with a single command.  
 
 ---
+
+## 🛠️ How to Use Docker Stacks
+
+### 1. Create a `docker-compose.yml` file
+Here is a simple example:
+
+```yaml
+version: "3.9"
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+```
+
+This file describes two services:
+- **web** → uses Nginx and exposes port 80  
+- **db** → runs MySQL with a root password
+
+---
