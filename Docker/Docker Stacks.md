@@ -11,3 +11,12 @@ Managing all of these containers separately can be tricky.
 This is where **Docker Stacks** come in!
 
 ---
+
+## ✨ What is a Docker Stack?
+
+A **Stack** is a collection of services (containers) that run together as a single project.  
+Think of it as a **team of containers** working side by side.  
+
+Instead of starting containers one by one, you define them in a configuration file and deploy them together with a single command.  
+
+---
