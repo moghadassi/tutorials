@@ -45,3 +45,21 @@ This file describes two services:
 - **db** → runs MySQL with a root password
 
 ---
+
+### 2. Deploy the stack
+
+Run the following command:
+
+```bash
+docker stack deploy -c docker-compose.yml mystack
+```
+
+- `-c` specifies the Compose file.  
+- `mystack` is the name of the stack.  
+
+Docker will automatically start all the services and connect them together.
+
+---
+
+
+
