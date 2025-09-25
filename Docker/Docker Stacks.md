@@ -83,5 +83,12 @@ docker stack rm mystack
 
 ---
 
+## 💡 Why Use Stacks?
 
+- Run multiple services together  
+- Simplify deployment in production (especially with Docker Swarm)  
+- Scale services up or down easily  
+- Keep your project organized with one configuration file  
+
+---
 
