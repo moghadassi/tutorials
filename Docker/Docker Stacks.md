@@ -92,3 +92,14 @@ docker stack rm mystack
 
 ---
 
+## 📌 Summary
+
+A **Docker Stack** = A complete project made of multiple services that you can deploy and manage with just one command.  
+It’s the easiest way to run complex applications with multiple containers.  
+
+---
+
+## 🔥 Try It Yourself!
+
+Clone this repository, create your own `docker-compose.yml`, and deploy your first stack.  
+You’ll see how simple it is to bring up a full application with just one command!
