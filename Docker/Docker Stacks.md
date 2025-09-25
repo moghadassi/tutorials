@@ -61,5 +61,27 @@ Docker will automatically start all the services and connect them together.
 
 ---
 
+### 3. Manage your stack
+
+- List all stacks:
+
+```bash
+docker stack ls
+```
+
+- List services in a stack:
+
+```bash
+docker stack services mystack
+```
+
+- Remove a stack:
+
+```bash
+docker stack rm mystack
+```
+
+---
+
 
 
