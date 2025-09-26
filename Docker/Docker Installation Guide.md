@@ -72,5 +72,19 @@ docker --version
    docker --version
    ```
 
+---
 
+## ✅ Post-Installation Steps
+
+- Add your user to the Docker group to run Docker without `sudo`:
+  ```bash
+  sudo usermod -aG docker $USER
+  newgrp docker
+  ```
+- Test Docker with:
+  ```bash
+  docker run hello-world
+  ```
+
+---
 
