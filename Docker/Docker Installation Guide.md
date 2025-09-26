@@ -47,3 +47,20 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # Verify Docker installation
 docker --version
 ```
+
+
+## 🍎 Install Docker on macOS
+
+1. Download **Docker Desktop for Mac** from the [official Docker website](https://www.docker.com/products/docker-desktop).
+2. Open the `.dmg` file and drag **Docker.app** to your `Applications` folder.
+3. Start Docker Desktop from `Applications`.
+4. Verify installation:
+   ```bash
+   docker --version
+   ```
+
+---
+
+
+
+
