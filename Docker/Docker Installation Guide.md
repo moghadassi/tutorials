@@ -61,6 +61,16 @@ docker --version
 
 ---
 
+## 🪟 Install Docker on Windows
+
+1. Download **Docker Desktop for Windows** from the [official Docker website](https://www.docker.com/products/docker-desktop).
+2. Run the installer and follow the on-screen instructions.
+3. Restart your system if required.
+4. Launch Docker Desktop.
+5. Verify installation:
+   ```powershell
+   docker --version
+   ```
 
 
 
