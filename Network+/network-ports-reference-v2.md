@@ -4,11 +4,71 @@ A comprehensive, ordered reference of TCP/UDP network ports — from the well-kn
 
 ## Table of Contents
 
+- [What Is a Port?](#what-is-a-port)
+- [TCP vs UDP](#tcp-vs-udp)
+- [How to Read This Table](#how-to-read-this-table)
+- [Category Guide](#category-guide)
 - [Port Ranges Overview](#port-ranges-overview)
 - [Well-Known Ports (0–1023)](#well-known-ports-0-1023)
 - [Registered Ports (1024–49151)](#registered-ports-1024-49151)
 - [Dynamic / Private Ports (49152–65535)](#dynamic--private-ports-49152-65535)
 - [Contributing](#contributing)
+
+---
+
+## What Is a Port?
+
+A **port** is a number (0–65535) that identifies a specific process or service on a device. Think of an IP address as a building's street address, and the port as the apartment number inside it.
+
+Example: `192.168.1.10:443` means *"reach the web server (HTTPS) running on this machine."*
+
+- Every network connection uses **two** ports: one on the client, one on the server.
+- Servers listen on well-known, fixed ports (e.g. a web server always listens on `80` or `443`).
+- Clients use random, temporary ports (ephemeral ports) to make outgoing requests.
+
+## TCP vs UDP
+
+| | TCP | UDP |
+|---|-----|-----|
+| **Connection** | Connection-oriented (handshake) | Connectionless |
+| **Reliability** | Guarantees delivery & order | No guarantee, no retransmission |
+| **Speed** | Slower (more overhead) | Faster (minimal overhead) |
+| **Use case** | Web, email, file transfer, SSH | DNS, streaming, gaming, VoIP |
+
+## How to Read This Table
+
+Each row follows this structure:
+
+```
+| Port | Protocol | Service | Category | Security | Description |
+```
+
+- **Port** — the port number
+- **Protocol** — `TCP`, `UDP`, or both
+- **Service** — the standard name/abbreviation of the service
+- **Category** — what kind of function it serves (see [Category Guide](#category-guide))
+- **Security** — a quick risk indicator (see legend below)
+- **Description** — a one-line explanation of what it does
+
+## Category Guide
+
+| Category | Meaning |
+|----------|---------|
+| **Web** | HTTP/HTTPS and web-facing traffic |
+| **Email** | Sending/receiving mail (SMTP, IMAP, POP3) |
+| **File Transfer** | Moving files between systems (FTP, TFTP, Rsync) |
+| **Remote Access** | Logging into or controlling another machine (SSH, RDP, VNC) |
+| **Database** | Database engines (MySQL, PostgreSQL, MongoDB, Redis) |
+| **Directory / DNS** | Name resolution and directory services (DNS, LDAP) |
+| **Authentication** | Identity and login verification (Kerberos, RADIUS) |
+| **VPN** | Encrypted tunnels between networks (OpenVPN, IPsec, PPTP) |
+| **Containers** | Docker, Kubernetes, and orchestration tools |
+| **Monitoring** | Logging, metrics, and system monitoring tools |
+| **Messaging** | Chat, queues, and pub/sub systems (IRC, XMPP, Kafka, MQTT) |
+| **Gaming** | Online multiplayer game traffic |
+| **Industrial Control** | SCADA/ICS protocols used in factories and infrastructure |
+| **Diagnostic** | Legacy network testing tools (Echo, Chargen, Finger) |
+| **Backdoor** | Ports historically associated with malware/exploits |
 
 ---
 
